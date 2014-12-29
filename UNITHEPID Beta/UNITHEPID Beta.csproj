@@ -94,6 +94,12 @@
     <Compile Include="frmIlustracionPies.Designer.cs">
       <DependentUpon>frmIlustracionPies.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaCura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaCura.Designer.cs">
+      <DependentUpon>frmNuevaCura.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProtocoloPacienteDiabetico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIlustracionPies.resx">
       <DependentUpon>frmIlustracionPies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaCura.resx">
+      <DependentUpon>frmNuevaCura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProtocoloPacienteDiabetico.resx">
       <DependentUpon>frmProtocoloPacienteDiabetico.cs</DependentUpon>
