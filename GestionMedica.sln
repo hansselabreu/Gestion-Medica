@@ -1,9 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNITHEPID Beta", "UNITHEPID Beta\UNITHEPID Beta.csproj", "{C182424A-9D80-457D-BED1-78A8C0444380}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNITHEPIDBeta", "UNITHEPID Beta\UNITHEPIDBeta.csproj", "{C182424A-9D80-457D-BED1-78A8C0444380}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocios", "CapaNegocios\CapaNegocios.csproj", "{3CA133DD-D29A-45C7-A3DD-EF17DD641689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,16 @@ Global
 		{3CA133DD-D29A-45C7-A3DD-EF17DD641689}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3CA133DD-D29A-45C7-A3DD-EF17DD641689}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3CA133DD-D29A-45C7-A3DD-EF17DD641689}.Release|x86.ActiveCfg = Release|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{31A20AAB-3BDE-4F7D-A543-6EBC06559BDC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

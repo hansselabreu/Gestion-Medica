@@ -5,8 +5,9 @@ using System.Text;
 
 namespace CapaNegocios
 {
-    public class HistoriaClinica
+    public class HistoriaClinica:ISearchable
     {
+        public int Id { get; set; }
         /// <summary>
         /// Id del paciente con esta historia clínica
         /// </summary>
@@ -17,35 +18,35 @@ namespace CapaNegocios
 
         #region ANTECEDENTES PATOLÓGICOS PERSONALES
 
-        public AntecedentePatologico Hospitalarios { get; set; }
-        public AntecedentePatologico Quirurgicos { get; set; }
-        public AntecedentePatologico Traumaticos { get; set; }
-        public AntecedentePatologico Medicamentos { get; set; }
-        public AntecedentePatologico Alergicos { get; set; }
-        public AntecedentePatologico Transfusionales { get; set; }
-        public AntecedentePatologico Virales { get; set; }
-        public AntecedentePatologico Otros { get; set; }
+        public string Hospitalarios { get; set; }
+        public string Quirurgicos { get; set; }
+        public string Traumaticos { get; set; }
+        public string Medicamentos { get; set; }
+        public string Alergicos { get; set; }
+        public string Transfusionales { get; set; }
+        public string Virales { get; set; }
+        public string Otros { get; set; }
 
         #endregion
 
 
         #region ANTECEDENTES FAMILIARES
 
-        public AntecedentePatologico Padre { get; set; }
-        public AntecedentePatologico Madre { get; set; }
-        public AntecedentePatologico Hermanos { get; set; }
-        public AntecedentePatologico Hijos { get; set; }
+        public string Padre { get; set; }
+        public string Madre { get; set; }
+        public string Hermanos { get; set; }
+        public string Hijos { get; set; }
 
         #endregion
 
 
         #region HÁBITOS TÓXICOS
 
-        public AntecedentePatologico Cafe { get; set; }
-        public AntecedentePatologico Tabaco { get; set; }
-        public AntecedentePatologico Alcohol { get; set; }
-        public AntecedentePatologico Tisanas { get; set; }
-        public AntecedentePatologico Drogas { get; set; }
+        public string Cafe { get; set; }
+        public string Tabaco { get; set; }
+        public string Alcohol { get; set; }
+        public string Tisanas { get; set; }
+        public string Drogas { get; set; }
 
         #endregion
 

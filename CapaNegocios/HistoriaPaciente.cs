@@ -10,7 +10,7 @@ namespace CapaNegocios
         public int Id { get; set; }
         public int IdPaciente { get; set; }
         public DateTime FechaDeteccion { get; set; }
-        public int TipoDiabetes { get; set; }
+        public byte TipoDiabetes { get; set; }
 
 
 

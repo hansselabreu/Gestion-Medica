@@ -9,12 +9,11 @@ using System.Windows.Forms;
 
 namespace UNITHEPID_Beta
 {
-    public partial class frmHistoriaClinica2 : Form
+    public partial class frmPrincipal : Form
     {
-        public frmHistoriaClinica2()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
-
     }
 }

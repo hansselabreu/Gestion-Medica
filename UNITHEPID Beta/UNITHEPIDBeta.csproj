@@ -34,7 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,12 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmControlVisitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,24 +71,6 @@
     <Compile Include="frmHistoriaClinica.Designer.cs">
       <DependentUpon>frmHistoriaClinica.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHistoriaClinica2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHistoriaClinica2.Designer.cs">
-      <DependentUpon>frmHistoriaClinica2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHistoriaClinica3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHistoriaClinica3.Designer.cs">
-      <DependentUpon>frmHistoriaClinica3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmHistoriaClinica4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHistoriaClinica4.Designer.cs">
-      <DependentUpon>frmHistoriaClinica4.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmIlustracionPies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +82,18 @@
     </Compile>
     <Compile Include="frmNuevaCura.Designer.cs">
       <DependentUpon>frmNuevaCura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoPaciente.Designer.cs">
+      <DependentUpon>frmNuevoPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProtocoloPacienteDiabetico.cs">
       <SubType>Form</SubType>
@@ -120,9 +115,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmControlVisitas.resx">
       <DependentUpon>frmControlVisitas.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,20 +124,17 @@
     <EmbeddedResource Include="frmHistoriaClinica.resx">
       <DependentUpon>frmHistoriaClinica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHistoriaClinica2.resx">
-      <DependentUpon>frmHistoriaClinica2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHistoriaClinica3.resx">
-      <DependentUpon>frmHistoriaClinica3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHistoriaClinica4.resx">
-      <DependentUpon>frmHistoriaClinica4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmIlustracionPies.resx">
       <DependentUpon>frmIlustracionPies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaCura.resx">
       <DependentUpon>frmNuevaCura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoPaciente.resx">
+      <DependentUpon>frmNuevoPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProtocoloPacienteDiabetico.resx">
       <DependentUpon>frmProtocoloPacienteDiabetico.cs</DependentUpon>
@@ -163,6 +152,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -184,6 +175,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pie_derecho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{31a20aab-3bde-4f7d-a543-6ebc06559bdc}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
+      <Project>{3ca133dd-d29a-45c7-a3dd-ef17dd641689}</Project>
+      <Name>CapaNegocios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
